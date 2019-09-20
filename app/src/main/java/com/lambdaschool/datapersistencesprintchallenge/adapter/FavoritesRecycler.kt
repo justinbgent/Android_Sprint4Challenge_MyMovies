@@ -11,7 +11,7 @@ import com.lambdaschool.datapersistencesprintchallenge.R
 import com.lambdaschool.sprint4challenge_mymovies.model.MovieOverview
 import kotlinx.android.synthetic.main.favorites_content.view.*
 
-class FavoritesRecycler(private val movies: List<MovieOverview>) :
+class FavoritesRecycler(private val movies: MutableList<MovieOverview>) :
     RecyclerView.Adapter<FavoritesRecycler.ViewHolder>() {
     lateinit var context: Context
 

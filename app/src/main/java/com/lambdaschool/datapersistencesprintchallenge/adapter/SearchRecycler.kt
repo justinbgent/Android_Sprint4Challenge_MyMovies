@@ -10,7 +10,7 @@ import com.lambdaschool.datapersistencesprintchallenge.R
 import com.lambdaschool.sprint4challenge_mymovies.model.MovieOverview
 import kotlinx.android.synthetic.main.search_content.view.*
 
-class SearchRecycler(private val movies: List<MovieOverview>) :
+class SearchRecycler(private val movies: MutableList<MovieOverview>) :
     RecyclerView.Adapter<SearchRecycler.ViewHolder>() {
     lateinit var context: Context
 
@@ -25,6 +25,9 @@ class SearchRecycler(private val movies: List<MovieOverview>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val searchMovies = movies[position]
+
+        holder.name.text = searchMovies.title
+        holder.year.text = searchMovies.release_date
 
 
     }

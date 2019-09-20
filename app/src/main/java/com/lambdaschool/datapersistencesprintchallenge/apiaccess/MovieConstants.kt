@@ -6,5 +6,5 @@ object MovieConstants {
     const val FIXED_QUERY_PARAMS = "?language=en-US&page=1&include_adult=false"
     const val SEARCH_MOVIES_ENDPOINT = "search/movie$FIXED_QUERY_PARAMS"
     const val USER_QUERY = "&query="
-    const val TO_SEARCH = BASE_URL + SEARCH_MOVIES_ENDPOINT + API_KEY_PARAM + USER_QUERY// + "user's search"
+    const val TO_SEARCH = SEARCH_MOVIES_ENDPOINT + API_KEY_PARAM + USER_QUERY// + "user's search"
 }
