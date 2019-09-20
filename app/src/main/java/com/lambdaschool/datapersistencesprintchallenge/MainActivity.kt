@@ -30,3 +30,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+/*
+* make my retrofit call work when I click search
+* add click for favoriting items and change background color to show selection
+* add long click listener to fav list items to delete
+* finish async calls
+* find out where to put @Entity in MovieOverview.kt
+* perhaps use an interface as a listener
+* */

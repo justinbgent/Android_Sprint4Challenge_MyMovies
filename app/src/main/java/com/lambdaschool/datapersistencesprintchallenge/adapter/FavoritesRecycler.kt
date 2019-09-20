@@ -25,9 +25,11 @@ class FavoritesRecycler(private val movies: MutableList<MovieOverview>) :
     override fun getItemCount(): Int = movies.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val favMovies = movies[position]
+        val favMovies = movies[position]
 
-
+//        holder.llayout.setOnLongClickListener {
+//            return@setOnLongClickListener true
+//        }
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

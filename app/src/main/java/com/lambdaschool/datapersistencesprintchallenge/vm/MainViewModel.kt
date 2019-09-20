@@ -26,15 +26,15 @@ class MainViewModel(context: Context): ViewModel() {
     }
 }
 
-class BuildAsyncTask(context: Context):AsyncTask<Void, Void, MutableList<MovieOverview>>(){
-    override fun doInBackground(vararg p0: Void?): MutableList<MovieOverview> {
-        return repository.buildMovieOverviewList()
-    }
 
-    override fun onPostExecute(result: MutableList<MovieOverview>?) {
-        super.onPostExecute(result)
-        if (result != null){
-            
-        }
+class AddAsyncTask(private val movieOverview: MovieOverview): AsyncTask<Void, Void, Unit>(){
+    override fun doInBackground(vararg p0: Void?) {
+        repository.createMovieOverview(movieOverview)
+    }
+}
+
+class UpdateAsyncTask(private val movieOverview: MovieOverview): AsyncTask<Void, Void, Unit>(){
+    override fun doInBackground(vararg p0: Void?) {
+        repository.updateMovieOverview(movieOverview)
     }
 }

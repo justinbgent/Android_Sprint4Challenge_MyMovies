@@ -5,7 +5,7 @@ import com.lambdaschool.sprint4challenge_mymovies.model.MovieOverview
 
 @Dao
 interface MovieDao {
-    @Query("SELECT * FROM movieOverview")
+    @Query("SELECT * FROM MovieOverview")
     fun buildMovieOverviewList(): MutableList<MovieOverview>
 
     @Insert
