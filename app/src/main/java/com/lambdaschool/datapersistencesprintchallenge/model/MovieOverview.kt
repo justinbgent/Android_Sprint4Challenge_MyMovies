@@ -1,8 +1,13 @@
 package com.lambdaschool.sprint4challenge_mymovies.model
 
-class MovieSearchResult(val results: List<MovieOverview>)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+class MovieSearchResult(val results: MutableList<MovieOverview>)
+
+@Entity
 class MovieOverview(
+        @PrimaryKey
         val id: Int,
         val original_language: String,
         val original_title: String,
